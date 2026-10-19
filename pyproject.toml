@@ -1,0 +1,29 @@
+[project]
+name = "bigearthnet-dl-distributed"
+version = "0.0.1"
+description = "Distributed computing tools for training deep learning models on BigEarthNet dataset"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ipykernel>=7.1.0",
+    "matplotlib>=3.10.8",
+    "nbconvert>=7.16.6",
+    "petastorm<0.14",
+    "pyarrow<11",
+    "tqdm>=4.67.1",
+    "numpy<2",
+    "pandas<2",
+    "rasterio>=1.3.10",
+    "s3fs>=2025.2.0",
+]
+
+[dependency-groups]
+dev = [
+    "commitizen>=4.11.3",
+]
+gpu = [
+    "tensorflow[and-cuda]<=2.17",
+    ]
+cpu = [
+    "tensorflow<=2.17",
+    ]
